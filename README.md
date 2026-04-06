@@ -1,6 +1,6 @@
 # Reproduc-io website
 
-Static landing page for `reproduc-io.ch`, designed for GitHub Pages hosting.
+Static landing page for `reproduc-io.com`, designed for GitHub Pages hosting.
 
 ## Files
 
@@ -22,23 +22,41 @@ Static landing page for `reproduc-io.ch`, designed for GitHub Pages hosting.
 4. In GitHub, open `Settings` -> `Pages`.
 5. Under `Build and deployment`, choose `Deploy from a branch`.
 6. Select your `main` branch and the `/ (root)` folder.
-7. Save. GitHub will publish the site.
-8. In your DNS provider, point `reproduc-io.ch` to GitHub Pages.
+7. In the Pages custom domain field, enter `reproduc-io.com`.
+8. Save. GitHub will publish the site.
+9. In your DNS provider, point `reproduc-io.com` to GitHub Pages.
 
 ## DNS setup for custom domain
 
-For the apex domain `reproduc-io.ch`, create `A` records pointing to GitHub Pages:
+For the apex domain `reproduc-io.com`, create `A` records pointing to GitHub Pages:
 
 - `185.199.108.153`
 - `185.199.109.153`
 - `185.199.110.153`
 - `185.199.111.153`
 
-For `www.reproduc-io.ch`, create a `CNAME` record pointing to:
+Optional but recommended: also create `AAAA` records:
+
+- `2606:50c0:8000::153`
+- `2606:50c0:8001::153`
+- `2606:50c0:8002::153`
+- `2606:50c0:8003::153`
+
+For `www.reproduc-io.com`, create a `CNAME` record pointing to:
 
 - `kriehl.github.io`
 
 Replace `kriehl` if your GitHub username is different.
+
+## Recommended domain verification
+
+GitHub recommends verifying the domain before or during setup to reduce takeover risk.
+
+1. In GitHub, open your account `Settings` -> `Pages`.
+2. Add `reproduc-io.com` as a verified domain.
+3. GitHub will show a TXT record name and value.
+4. Add that TXT record in your DNS provider and keep it there permanently.
+5. Return to GitHub and click `Verify`.
 
 ## Local preview
 
