@@ -27,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   color: var(--ink);
   background:
     radial-gradient(circle at top left, rgba(234, 91, 42, 0.14), transparent 28%),
@@ -162,7 +162,7 @@ ul {
 
 .hero h1 span {
   display: block;
-  font-family: "Instrument Serif", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 400;
   color: var(--forest);
@@ -412,7 +412,7 @@ ul {
 }
 
 .quote-block p {
-  font-family: "Instrument Serif", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4vw, 3.4rem);
   font-style: italic;
 }
@@ -442,10 +442,89 @@ ul {
 .site-footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
   padding: 1rem 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+}
+
+.legal-shell {
+  min-height: 100vh;
+}
+
+.legal-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-hero,
+.legal-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.legal-hero {
+  padding: 2.5rem;
+}
+
+.legal-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.legal-lead {
+  max-width: 60ch;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.legal-note {
+  margin-top: 1rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.legal-card {
+  padding: 1.7rem;
+}
+
+.legal-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.legal-card p {
+  max-width: 70ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-card p + p {
+  margin-top: 0.9rem;
 }
 
 .reveal {
@@ -484,6 +563,11 @@ ul {
   .site-footer,
   .section-heading {
     display: block;
+  }
+
+  .footer-meta {
+    align-items: flex-start;
+    margin-top: 0.8rem;
   }
 
   .cta-actions {
